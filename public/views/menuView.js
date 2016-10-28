@@ -50,7 +50,7 @@
         addListeners() {
             this.buttonSearchGame._get().addEventListener('click', (event) => {
                 console.log('click SearchGame');
-                this.router.go('/searchGame', loginView);
+                this.router.go('/searchGame');
             });
             this.buttonRating._get().addEventListener('click', (event) => {
                 console.log('click rating');
@@ -58,7 +58,7 @@
             });
 			this.buttonUserProfile._get().addEventListener('click', (event) => {
 				console.log('click profile');
-				this.router.go('/profile', loginView);
+				this.router.go('/profile');
 			});
 			this.buttonConfig._get().addEventListener('click', (event) => {
 				console.log('click config');

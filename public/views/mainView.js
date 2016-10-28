@@ -8,7 +8,7 @@
     class mainView extends View {
         constructor(options = {}){
             super(options);
-            this._el = document.querySelector('.main_container_view');
+            this._el = document.querySelector('.js-main');
             this.createElements();
             this.addElements();
             this.addListeners();

@@ -7,6 +7,10 @@
 	const loginView = window.loginView;
 	const registView = window.registView;
 	const menuView = window.menuView;
+	const searchGameView = window.searchGameView;
+	const ratingView = window.ratingView;
+	const configView = window.configView;
+	const profileView = window.profileView;
 
 
 	// TIP: роуты нужно указывать от наиболее специфичного к наименее специфичному
@@ -16,10 +20,10 @@
 		.addRoute('/login',loginView)
 		.addRoute('/registration',registView)
 		.addRoute('/menu',menuView)
-		.addRoute('/searchGame',loginView)
-		.addRoute('/rating',registView)
-		.addRoute('/profile',menuView)
-		.addRoute('/config',menuView)
+		.addRoute('/searchGame',searchGameView)
+		.addRoute('/rating',ratingView)
+		.addRoute('/profile',profileView)
+		.addRoute('/config',configView)
 
 		.addRoute('/', mainView)
 
