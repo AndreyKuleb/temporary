@@ -40,7 +40,7 @@
             });
             this.buttonRegister._get().addEventListener('click', (event) => {
                 console.log('click register');
-                this.router.go('/register');
+                this.router.go('/registration');
             });
         }
     }
