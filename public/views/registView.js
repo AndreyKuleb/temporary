@@ -5,10 +5,10 @@
 	const View = window.View;
 	const Form = window.Form;
 
-	class loginView extends View {
+	class registerView extends View {
 		constructor(options = {}) {
 			super(options);
-			this._el = document.querySelector('.js-login');
+			this._el = document.querySelector('.js-regist');
 			this.createElements();
 			this.addElements();
 			this.addListeners();
@@ -16,27 +16,32 @@
 		}
 
 		createElements() {
-			this.loginForm = new Form({
+			this.registForm = new Form({
 				el: document.createElement('div'),
 				data: {
 					title: 'AGRage',
 					fields: [{
-						name: 'login',
+						name: 'user',
 						type: 'text',
-						placeholder: "Enter your login",
+						placeholder: "Введите ваш логин",
 						maxlength: "25",
 						minlength: "5",
 						required: "required"
 					}, {
+						name: 'email',
+						type: 'email',
+						placeholder: "Введите ваш email",
+						required: "required"
+					}, {
 						name: 'password',
 						type: 'password',
-						placeholder: "Enter your password",
+						placeholder: "Веедите ваш пароль",
 						maxlength: "25",
-						minlength: "5",
+						minlength: "6",
 						required: "required"
 					}],
 					controls: [{
-						text: 'Войти',
+						text: 'Зарегистрироваться',
 						attrs: {
 							type: 'submit'
 						}
@@ -46,17 +51,17 @@
 		}
 
 		addElements() {
-			this._el.appendChild(this.loginForm._get());
+			this._el.appendChild(this.registForm._get());
 		}
 
 		addListeners() {
-			this.loginForm._get().addEventListener('submit', event => {
-				console.log('click login');
+			this.registForm._get().addEventListener('submit', event => {
+				console.log('click regist');
 				this.router.go('/menu');
 			});
 
 		}
 	}
 
-	window.loginView = loginView;
+	window.registView = registerView;
 }());

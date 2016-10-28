@@ -3,8 +3,7 @@
     const Button = window.Button;
     const View = window.View;
 	const loginView = window.loginView;
-    //const AboutTeamView = window.AboutTeamView;
-//lalala
+
     class mainView extends View {
         constructor(options = {}){
             super(options);
@@ -18,25 +17,18 @@
         createElements() {
             this.buttonLogin = new Button({
                 el: document.createElement('button'),
-                //classAttrs: ['ui', 'button', 'login', 'pink'],
 				classAttrs: ['pink'],
-                text: 'Логин',
+                text: 'ВОЙТИ',
             });
 
             this.buttonRegister = new Button({
                 el: document.createElement('button'),
-                //classAttrs: ['ui', 'button', 'register', 'pink'],
 				classAttrs: ['pink'],
-                text: 'Регистрация',
+                text: 'РЕГИСТРАЦИЯ',
             });
         }
 
         addElements() {
-
-			//console.log(this.buttons._get());
-            //this._el.appendChild(this.buttons._get());
-			//this.buttons._el.appendChild(this.buttonLogin._get());
-            //this.buttons._el.appendChild(this.buttonRegister._get());
 			this._el.appendChild(this.buttonLogin._get());
 			this._el.appendChild(this.buttonRegister._get());
         }

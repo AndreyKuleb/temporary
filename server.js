@@ -6,9 +6,15 @@ let path = require('path');
 
 let technolibs = require('technolibs');
 
-app.use('/', express.static('public', { maxAge: 1 }));
 app.use('/chat', express.static('public', {maxAge: 1}));
 app.use('/login', express.static('public', {maxAge: 1}));
+app.use('/menu', express.static('public', {maxAge: 1}));
+app.use('/registration', express.static('public', {maxAge: 1}));
+app.use('/searchGame', express.static('public', {maxAge: 1}));
+app.use('/rating', express.static('public', {maxAge: 1}));
+app.use('/profile', express.static('public', {maxAge: 1}));
+app.use('/config', express.static('public', {maxAge: 1}));
+app.use('/', express.static('public', { maxAge: 1 }));
 
 technoDoc.generate(require('./api'), 'public');
 
