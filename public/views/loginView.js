@@ -19,18 +19,18 @@
 			this.loginForm = new Form({
 				el: document.createElement('div'),
 				data: {
-					title: 'Login',
+					title: 'AGRage',
 					fields: [{
-						name: 'user',
+						name: 'login',
 						type: 'text',
-						placeholder: "Enter your name",
+						placeholder: "Enter your login",
 						maxlength: "25",
 						minlength: "5",
 						required: "required"
 					}, {
-						name: 'email',
-						type: 'email',
-						placeholder: "Enter your email",
+						name: 'password',
+						type: 'password',
+						placeholder: "Enter your password",
 						maxlength: "25",
 						minlength: "5",
 						required: "required"
@@ -52,7 +52,7 @@
 		addListeners() {
 			this.loginForm._get().addEventListener('submit', event => {
 				console.log('click login');
-				this.router.go('/login');
+				this.router.go('/play_menu');
 			});
 			/*this.buttonRegister.el.addEventListener('click', (event) => {
 				console.log('click register');

@@ -6,9 +6,10 @@ let path = require('path');
 
 let technolibs = require('technolibs');
 
-app.use('/', express.static('public', { maxAge: 1 }));
 app.use('/chat', express.static('public', {maxAge: 1}));
 app.use('/login', express.static('public', {maxAge: 1}));
+app.use('/registration', express.static('public', {maxAge: 1}));
+app.use('/', express.static('public', { maxAge: 1 }));
 
 technoDoc.generate(require('./api'), 'public');
 
