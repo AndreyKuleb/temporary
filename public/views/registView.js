@@ -57,7 +57,7 @@
 		addListeners() {
 			this.registForm._get().addEventListener('submit', event => {
 				console.log('click regist');
-				this.router.go('/play_menu');
+				this.router.go('/menu');
 			});
 
 		}
