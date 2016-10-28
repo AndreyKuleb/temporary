@@ -4,6 +4,7 @@
     const View = window.View;
 	const loginView = window.loginView;
 
+//lalala
     class mainView extends View {
         constructor(options = {}){
             super(options);
